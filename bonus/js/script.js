@@ -1,9 +1,8 @@
 
-/* Descrizione esercizio:
-1. Chiedi all’utente il suo nome,
-2. poi chiedi il suo cognome,
-3. poi chiedi il suo colore preferito
-4. Infine scrivi sulla pagina nomecognomecolorepreferito21
+/* bonus:
+- chiediamo all'utente anche il suo numero preferito
+- al numero preferito sommiamo 5
+- attacchiamo alla password, al posto del 21, il risultato 
 */
 
 
@@ -22,12 +21,19 @@ let colorePreferitoUtente = prompt('Inserisci il tuo colore preferito');
 console.log('Colore preferito: Utente ' + colorePreferitoUtente);
 document.writeln("Colore preferito Utente:" + colorePreferitoUtente);
 
-// variabile numero 21 per password
-let numero = 21;
+// chiedo all'utente il suo numero preferito
+let numeroPreferitoUtente = prompt('Inserisci il tuo numero preferito');
+console.log('Numero preferito: Utente ' + numeroPreferitoUtente);
+document.writeln("Numero preferito Utente:" + numeroPreferitoUtente);
+
+// somma numero preferito + 5
+let somma = parseInt(numeroPreferitoUtente) + 5;
+console.log("Numero preferito + 5 " + somma);
+document.writeln("Numero preferito + 5 = " + somma);
 
 // stampa password
 let stampa = `
-  <h1>${nomeUtente}${cognomeUtente}${colorePreferitoUtente}${numero}</h1>
+  <h1>${nomeUtente}${cognomeUtente}${colorePreferitoUtente}${somma}</h1>
   `;
 console.log(stampa);
 document.getElementById('mio_id').innerHTML = stampa;
